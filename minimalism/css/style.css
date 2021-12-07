@@ -36,7 +36,8 @@ body {
 
     color: #C29A5C;
 }
-.heder__menu {
+.header__menu {
+    position: relative;
 }
 
 
