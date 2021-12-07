@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+.wrap {
+    height: calc(100vh - 76px);
+    min-height: 600px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: relative;
+}
+
+.header {
+    background-color: #fff;
+    height: 76px;
+    width: 100%;
+}
+.header__content {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo {
+}
+.header__menu {
+    display: flex;
+    align-items: center;
+}
+.header__item {
+    list-style-type: none;
+    margin-left: 54px;
+  
+}
+.header__item a {
+    font-family: Montserrat, monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+
+    color: #00AAFF;
+    border-bottom: 2px solid #fff;
+    transition: border-color .3s;
+} 
+.header__item a:hover {
+    border-color: #00AAFF;
+}
+
+.footer {
+    background: #DBDBDB;
+    padding: 34px 0;
+}
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer__col {
+    display: flex;
+    flex-direction: column;
+}
+.footer__title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 29px;
+    margin-bottom: 34px;
+
+    color: #00AAFF;
+}
+.footer__item {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    text-decoration: none;
+
+    color: #161616;
+}
+.footer__item[href]:hover {
+    text-decoration: underline;
+}
+
+
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.title {
+    position: absolute;
+    left: 50%;
+    top: -15%;
+    font-family: Play;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 722px;
+    opacity: 0;
+
+    color: rgba(105, 224, 255, 0.6);
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    animation: title 1s ease-out 0s 1 normal forwards, 
+               bounce 2s ease-in-out 1s infinite normal forwards;
+
+}
+
+.car {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.modal {
+    margin-top: 250px;
+    width: 565px;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px 0;
+
+    background: linear-gradient(261.53deg, rgba(183, 218, 225, 0.9) -2.09%, rgba(96, 180, 199, 0) 106.97%);
+    border: 2px solid #00AAFF;
+    filter: drop-shadow(-1px 1px 5px rgba(0, 0, 0, 0.25));
+    backdrop-filter: blur(4px);
+    border-radius: 25px;
+    opacity: 0;
+
+    animation-name: modal;
+    animation-duration: 1s;
+    animation-delay: .8s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.modal__title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    color: #FFFFFF;
+}
+.modal__nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+.modal__btn {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 44px;
+    text-decoration: none;
+    text-align: center;
+    
+    width: 188px;
+    height: 44px;
+
+    color: #00AAFF;
+
+    background: rgba(255, 255, 255, 0.72);
+    border: 2px solid #00AAFF;
+    border-radius: 40px;
+}
+.modal__btn-report {
+    color: #fff;
+    background: transparent;
+}
+
+@keyframes modal {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes title {
+    from {
+        transform: translateX(-50%) translateY(-100px);
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-20px);
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+    }
+}
